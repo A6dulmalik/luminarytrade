@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "5.18.0",
     "@mui/material": "^5.15.0",
+    "@reduxjs/toolkit": "^2.11.2",
     "@types/uuid": "^10.0.0",
     "ajv": "^8.18.0",
     "ajv-keywords": "^5.1.0",
@@ -26,9 +27,11 @@
     "html-to-image": "^1.11.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^6.8.0",
-    "uuid": "^13.0.0",
-    "recharts": "^3.7.0"
+    "recharts": "^3.7.0",
+    "socket.io-client": "^4.8.3",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.0",
@@ -38,6 +41,7 @@
     "@types/node": "^20.19.33",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "@types/socket.io-client": "^1.4.36",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.0.0",
