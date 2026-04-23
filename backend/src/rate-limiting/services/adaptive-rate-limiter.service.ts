@@ -69,8 +69,8 @@ export class AdaptiveRateLimiterService implements IRateLimiter {
   }
 
   private async getAdjustedOptions(
-    options: Partial<RateLimiterOptions>,
-  ): Promise<Partial<RateLimiterOptions>> {
+    options: Partial<RateLimiterOptions> & { burstSize?: number },
+  ): Promise<Partial<RateLimiterOptions> & { burstSize?: number }> {
     const storedMultiplier = await this.cache.get<number>('ratelimit:adaptive:multiplier');
     const multiplier = storedMultiplier ?? this.currentMultiplier;
 
@@ -88,6 +88,7 @@ export class AdaptiveRateLimiterService implements IRateLimiter {
       maxRequests: adjustedMaxRequests,
       windowMs: options.windowMs || adaptiveConfig.windowMs,
       keyPrefix: options.keyPrefix || adaptiveConfig.keyPrefix,
+      burstSize: (options as any).burstSize,
     };
   }
 

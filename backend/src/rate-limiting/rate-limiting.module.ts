@@ -10,6 +10,7 @@ import { RateLimitGuard } from './guards/rate-limit.guard';
 import { AdaptiveRateLimiterService } from './services/adaptive-rate-limiter.service';
 import { IpFilterService } from './services/ip-filter.service';
 import { RateLimitMetricsService } from './services/rate-limit-metrics.service';
+import { RateLimitTierService } from './services/rate-limit-tier.service';
 import { RateLimitingController } from './rate-limiting.controller';
 import { SystemLoadMiddleware } from './middleware/system-load.middleware';
 
@@ -51,6 +52,7 @@ import { SystemLoadMiddleware } from './middleware/system-load.middleware';
     AdaptiveRateLimiterService,
     IpFilterService,
     RateLimitMetricsService,
+    RateLimitTierService,
     RateLimitGuard,
     SystemLoadMiddleware,
   ],
@@ -62,6 +64,7 @@ import { SystemLoadMiddleware } from './middleware/system-load.middleware';
     AdaptiveRateLimiterService,
     IpFilterService,
     RateLimitMetricsService,
+  RateLimitTierService,
     RateLimitGuard,
     SystemLoadMiddleware,
   ],
